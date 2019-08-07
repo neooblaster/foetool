@@ -10,6 +10,6 @@
     <title>FoE Tool</title>
 </head>
 <body id="FoEToolIndexPage">
-    <h1>FoE Tool</h1>
+    <h1><img src="lib/img/foe-logo.png" alt="Forge Of Empire Tool"></h1>
 </body>
 </html>
