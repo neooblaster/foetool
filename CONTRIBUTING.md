@@ -38,6 +38,26 @@ This file is built from file ``foe.less``
 
 
 
+## Working Principles
+
+
+### Engine ``FOETool``
+
+The JavaScript class ``foetool`` is the main class executed
+by the User Script under **Tampermonkey** (or other).
+The script is loaded as ``require`` dependency.
+
+To developt and to get same features on the website,
+this class is also used in file ``index.php``.
+To reproduce the behavior of the browser plugin,
+I created a file ``bootstrap`` to reproduce initialization
+steps.
+
+
+
+
+
+
 ## Annexes
 
 ### Install ``NodeJS``

@@ -55,6 +55,7 @@ web page. Check in the browser toolbar if the userscript is executed :
     FOETOOL.HTML = HTML;
     FOETOOL.xhrQuery = xhrQuery;
     FOETOOL.FOE = new FOETool();
+    FOETOOL.FOE.init();
 })();
 ````
 [](#import<lib/js/foe.uscript.gc.tampermonkey.js:js)
