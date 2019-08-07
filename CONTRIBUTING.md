@@ -19,19 +19,28 @@ This file is built from file ``foe.less``
 ## Todo when I change a file
 
 
-### Change on ``README.md``
+### Changes on ``README.md``
 
 
 
-### Change on ``foe.uscript.gc.tampermonkey.js``
+### Changes on ``lib/js/foe.uscript.gc.tampermonkey.js``
 
 * Run the command ``mdmerge README.md``
 
 
 
-### Change on ``foe.less``
+### Changes on ``lib/less/foe.less``
 
 * Run the command ``lessc --clean-css lib/less/foe.less lib/css/foe.css``
+
+
+
+### Changes on ``etc/resources.json``
+
+Depending of modification made on this resource file,
+the script ``/lib/js/foetool.js`` must be update too.
+
+* Please check method ``index``
 
 
 
@@ -61,6 +70,15 @@ steps.
 ## Annexes
 
 ### Install ``NodeJS``
+
+
+
+### Install ``npm``
+
+**NPM** is the packages dependencies manager
+provided with the application **NodeJS**.
+Please follow instructions of chapter **Install ``NodeJs``**
+available in the **Annexes** section.
 
 
 

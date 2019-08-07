@@ -48,7 +48,7 @@ web page. Check in the browser toolbar if the userscript is executed :
     // Chargement de la feuille de style
     let stylesheet = document.createElement('link');
     stylesheet.setAttribute('rel', 'stylesheet');
-    stylesheet.setAttribute('href', 'https://foe.neoblaster.fr/foe.css');
+    stylesheet.setAttribute('href', 'https://foe.neoblaster.fr/lib/css/foe.css');
     document.head.appendChild(stylesheet);
 
     // Bridging des libs

@@ -1,0 +1,12 @@
+{
+    "alias": {
+        "openButton": "flag_20.jpg"
+    },
+    "images": {
+        "location": "https://foefr.innogamescdn.com/assets/shared",
+        "list": [
+            {"path": "clanflags", "name": "flag_20.jpg", "desc": "Epicure Flag"}
+        ]
+    },
+    "spritesheet": 0
+}

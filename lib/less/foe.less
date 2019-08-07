@@ -1,5 +1,35 @@
 // CSS Dedicated to Forge Of Empire application for integrated tool.
 
+@openButtonSize: 64px;
+@radius: (@openButtonSize + 2px) / 2;
+@borderSize: 2px;
+
+#FOETOpenButton {
+    position: fixed !important;
+    z-index: 9999;
+    right: 20px;
+    bottom: 20px;
+    cursor: pointer;
+    .border(@openButtonSize,@openButtonSize);
+    .borderRadius(@radius, @borderSize);
+
+    .InnerBorder1 {
+        .InnerBorder2 {
+            img {
+                display: block;
+                width: @openButtonSize;
+                height: @openButtonSize;
+                position: relative;
+                overflow: visible;
+                border: @borderSize solid #97714e;
+                left: @borderSize;
+                top: @borderSize;
+                border-radius: @radius;
+            }
+        }
+    }
+}
+
 // CSS Dedicated to foe.neoblaster.fr
 #FoEToolIndexPage {
     background-image: url("/lib/img/background.jpg");
@@ -13,5 +43,96 @@
     h1 {
         margin: auto;
         text-align: center;
+    }
+}
+
+.border (@width, @height) {
+    position: relative;
+    width: @width + (12 * @borderSize);
+    height: @height + (12 * @borderSize);
+    border: @borderSize solid #bf8443;
+
+    &:after {
+        content: "";
+        display: block;
+        width: @width + (14 * @borderSize);
+        height: @height + (14 * @borderSize);
+        border: @borderSize solid #3d2407;
+        top: -2 * @borderSize;
+        left: -2 * @borderSize;
+        position: absolute;
+    }
+
+    .InnerBorder1 {
+        position: relative;
+        width: @width + (8 * @borderSize);
+        height: @height + (8 * @borderSize);
+        top: 1 * @borderSize;
+        left: 1 * @borderSize;
+        border: @borderSize solid #6a401f;
+
+        &:after {
+            content: "";
+            display: block;
+            width: @width + (10 * @borderSize);
+            height: @height + (10 * @borderSize);
+            border: @borderSize solid #885328;
+            top: -2 * @borderSize;
+            left: -2 * @borderSize;
+            position: absolute;
+        }
+
+        .InnerBorder2 {
+            position: relative;
+            width: @width + (4 * @borderSize); // 2x border + 2x inner
+            height: @height + (4 * @borderSize); // 2x border + 2x inner
+            top: @borderSize;
+            left: @borderSize;
+            border: @borderSize solid #261802;
+
+            &:before {
+                content: "";
+                display: block;
+                background: #9d7e63;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+            }
+            &:after {
+                content: "";
+                display: block;
+                width: @width + (6 * @borderSize);
+                height: @height + (6 * @borderSize);
+                border: @borderSize solid #995f2e;
+                top: -2 * @borderSize;
+                left: -2 * @borderSize;
+                position: absolute;
+            }
+        }
+    }
+}
+
+.borderRadius (@radius, @border) {
+    border-radius: @radius + (10 * @border);
+
+    &:after {
+        border-radius: @radius + (12 * @border);
+    }
+
+    .InnerBorder1 {
+        border-radius: @radius + (6 * @border);
+        &:after {
+            border-radius: @radius + (8 * @border);
+        }
+
+        .InnerBorder2 {
+            border-radius: @radius + (2 * @border);
+            &:before {
+                border-radius: @radius + @border;
+            }
+            &:after {
+                border-radius: @radius + (4 * @border);
+            }
+        }
     }
 }
