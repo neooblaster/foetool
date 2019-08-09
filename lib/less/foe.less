@@ -1,17 +1,16 @@
 // CSS Dedicated to Forge Of Empire application for integrated tool.
 
-@openButtonSize: 64px;
+@openButtonSize: 48px;
 @radius: (@openButtonSize + 2px) / 2;
 @borderSize: 2px;
 
 #FOETOpenButton {
     position: fixed !important;
-    z-index: 9999;
+    z-index: 10000;
     right: 20px;
     bottom: 20px;
     cursor: pointer;
-    .border(@openButtonSize,@openButtonSize);
-    .borderRadius(@radius, @borderSize);
+    .border(@openButtonSize,@openButtonSize, @radius, @borderSize, rgba(255,255,255,.175));
 
     .InnerBorder1 {
         .InnerBorder2 {
@@ -46,11 +45,29 @@
     }
 }
 
-.border (@width, @height) {
+// Mixins CSS
+
+// Make a border with many different color using 3 wrappers :
+//  - Your display block element
+//    - InnerBorder1
+//      - InnerBorder2
+//        - Your final display block element
+//
+//  Expected value:
+//      {px}    @width           mandatory          : Expected width  for your final display block element
+//      {px}    @height          mandatory          : Expected height for your final display block element
+//      {px}    @radius          optional default 0 : Expected radius to round the border corners
+//      {px}    @border          mixed    default 0 : Mandatory is @radius is used. Provide your border width
+//                                                    to get the right border radius when you make a circle
+//      {color} @hoverBackground optional default 0 : Expected radius to round the border corner
+//
+.border (@width, @height, @radius: 0px, @border: 0px, @hoverBackground: rgba(0,0,0,0)) {
     position: relative;
     width: @width + (12 * @borderSize);
     height: @height + (12 * @borderSize);
     border: @borderSize solid #bf8443;
+
+    .borderRadius(@radius, @border);
 
     &:after {
         content: "";
@@ -61,6 +78,20 @@
         top: -2 * @borderSize;
         left: -2 * @borderSize;
         position: absolute;
+    }
+
+    &:hover {
+        &:before {
+            content: "";
+            display: block;
+            background: @hoverBackground;
+            width: @openButtonSize + (16 * @borderSize);
+            height: @openButtonSize + (16 * @borderSize);
+            top: -4px;
+            left: -4px;
+            position: absolute;
+            z-index: 10001;
+        }
     }
 
     .InnerBorder1 {
@@ -117,6 +148,12 @@
 
     &:after {
         border-radius: @radius + (12 * @border);
+    }
+
+    &:hover {
+        &:before {
+            border-radius: @radius + (12 * @border);
+        }
     }
 
     .InnerBorder1 {

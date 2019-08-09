@@ -1,0 +1,16 @@
+{
+    "name": "FoETool",
+    "config": {
+        "vendor-dir": "lib/vendor"
+    },
+    "require": {
+        "neooblaster/template": "<=4",
+        "neooblaster/syslang": "<=2"
+    },
+    "minimum-stability": "beta",
+    "scripts": {
+        "post-install-cmd": [
+            "ln -sr ./lib/vendor/neooblaster/syslang/src/command_index.php /usr/local/bin/syslang"
+        ]
+    }
+}

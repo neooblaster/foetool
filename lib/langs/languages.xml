@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<languages default="fr-FR">
+  <language LANG-CODE="fr" COUNTRY-CODE="FR" LANG="fr-FR">Français</language>
+  <language LANG-CODE="en" COUNTRY-CODE="EN" LANG="en-EN">English</language>
+</languages>

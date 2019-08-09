@@ -1,0 +1,96 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "ac15b46faf6b1e8e8ba7799dcab01982",
+    "packages": [
+        {
+            "name": "neooblaster/syslang",
+            "version": "v2.0.0-beta2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/neooblaster/SYSLang.git",
+                "reference": "2890afbb4faa12088a51f877f825a3eb840ec051"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/neooblaster/SYSLang/zipball/2890afbb4faa12088a51f877f825a3eb840ec051",
+                "reference": "2890afbb4faa12088a51f877f825a3eb840ec051",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "SYSLang\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Nicolas DUPRE",
+                    "role": "Developer",
+                    "email": "neo-blaster@hotmail.fr"
+                }
+            ],
+            "description": "A PHP language engine using XML files. It's made to provide data for my engine template",
+            "keywords": [
+                "SYSLang",
+                "language",
+                "php",
+                "template"
+            ],
+            "time": "2018-04-07T14:44:03+00:00"
+        },
+        {
+            "name": "neooblaster/template",
+            "version": "v4.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/neooblaster/Template.git",
+                "reference": "05b740d823cf42f5d10f8e9124b817907401473c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/neooblaster/Template/zipball/05b740d823cf42f5d10f8e9124b817907401473c",
+                "reference": "05b740d823cf42f5d10f8e9124b817907401473c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Template\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Nicolas DUPRE",
+                    "email": "neo-blaster@hotmail.fr",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A PHP Template engine based on Smarty syntax.",
+            "keywords": [
+                "php",
+                "template"
+            ],
+            "time": "2019-04-24T10:45:37+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "beta",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

@@ -6,6 +6,19 @@ please read this file first.
 
 ## Get started
 
+Somes libraries are required to developt this tool.
+This project used two dependcy manager.
+The first one is ``Composer`` which is mainly made for **PHP**.
+The second one is ``NPM`` provided with **NodeJS**.
+Please refer to the **annexes** sections to follow install instructions.
+
+Once you installed tools, you will need to perform the following command
+to get **PHP** dependencies.
+
+```
+composer install
+```
+
 If you perform modifications, depending of file modified
 your have to run some command lines to update, build or compile
 resources. All command line are available in the **Annexes** section
@@ -13,6 +26,11 @@ to find how to get them.
 
 Do not perform modifications on the file ``foe.css``.
 This file is built from file ``foe.less``
+
+
+
+## Managing languages texts
+
 
 
 
@@ -44,6 +62,13 @@ the script ``/lib/js/foetool.js`` must be update too.
 
 
 
+### Changes on XML languages files
+
+* Go in the folder ``lib/langs``
+* Enter the command ``syslang --deploy``
+
+
+
 
 
 
@@ -68,6 +93,10 @@ steps.
 
 
 ## Annexes
+
+### Install ``composer``
+
+
 
 ### Install ``NodeJS``
 
@@ -97,5 +126,17 @@ available in the **Annexes** section.
 ### Install ``less-plugin-clean-css``
 
 * Run the command ``npm install -g less-plugin-clean-css``
+
+
+
+### Install ``syslang``
+
+* The ``syslang`` command is install with `Composer` on `post-install-cmd`.
+* If the shell said the command `syslang` is not found follow this step.
+
+````bash
+# From project root
+ln -sr ./lib/vendor/neooblaster/syslang/src/command_index.php /usl/local/bin/syslang
+````
 
 
