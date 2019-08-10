@@ -4,11 +4,19 @@
 @radius: (@openButtonSize + 2px) / 2;
 @borderSize: 2px;
 
+@windowsWidth: 600px;
+@windowsHeight: 400px;
+@windowsHeaderHeight: 54px;
+
+@titleColor: #f3d6a0;
+@textColor: #dcae58;
+@keywordColor: #dcae58;
+
 #FOETOpenButton {
     position: fixed !important;
     z-index: 10000;
-    right: 20px;
-    bottom: 20px;
+    right: 10px;
+    bottom: 25px;
     cursor: pointer;
     .border(@openButtonSize,@openButtonSize, @radius, @borderSize, rgba(255,255,255,.175));
 
@@ -26,6 +34,130 @@
                 border-radius: @radius;
             }
         }
+    }
+}
+
+#FOETWindows {
+    font-family: Arial, sans-serif;
+    position: fixed;
+    z-index: 10000;
+    width: @windowsWidth;
+    height: @windowsHeight;
+    left: 50px;
+    background-image: url('/lib/img/w01-bg.png');
+
+    & > div {
+        position: relative;
+        width: @windowsWidth - 20px;
+        left: 10px;
+        height: @windowsHeight + 10px; // +10
+        background-image: url('/lib/img/w01-bottom.png');
+        background-repeat: repeat-x;
+        background-position: bottom;
+        background-size: 100% 21px;
+
+        &:before {
+            position: absolute;
+            content: "";
+            display: block;
+            width: 21px;
+            left: -21px;
+            top: 0;
+            height: @windowsHeight + 10px; // +10
+            background-image: url('/lib/img/w01-bottom-left.png');
+            background-repeat: no-repeat;
+            background-position: bottom;
+        }
+        &:after {
+            position: absolute;
+            content: "";
+            display: block;
+            width: 21px;
+            right: -21px;
+            top: 0;
+            height: @windowsHeight + 10px; // +10
+            background-image: url('/lib/img/w01-bottom-right.png');
+            background-repeat: no-repeat;
+            background-position: bottom;
+        }
+
+        & > h1 {
+            position: absolute;
+            top: -10px;
+            width: @windowsWidth - 20px;
+            height: @windowsHeaderHeight;
+            background-image: url('/lib/img/w01-top.png');
+            background-repeat: repeat-x;
+            background-position: top;
+            background-size: 100% @windowsHeaderHeight;
+            color: @titleColor;
+            font-size: 1.1rem;
+            font-weight: 300;
+            line-height: 1.1rem;
+            padding: 19px 0 0;
+
+            &:before {
+                position: absolute;
+                content: "";
+                display: block;
+                width: 21px;
+                left: -21px;
+                top: 0;
+                height: @windowsHeaderHeight;
+                background-image: url('/lib/img/w01-top-left.png');
+                background-repeat: no-repeat;
+                background-position: top;
+            }
+            &:after {
+                position: absolute;
+                content: "";
+                display: block;
+                width: 21px;
+                right: -21px;
+                top: 0;
+                height: @windowsHeaderHeight;
+                background-image: url('/lib/img/w01-top-right.png');
+                background-repeat: no-repeat;
+                background-position: top;
+            }
+        }
+        & > div {
+            position: absolute;
+            width: @windowsWidth - 20px;
+            height: @windowsHeight - 1px - @windowsHeaderHeight;
+            bottom: 21px;
+
+            &:before {
+                position: absolute;
+                content: "";
+                display: block;
+                width: 21px;
+                height: 100%;
+                left: -21px;
+                top: 0;
+                background-image: url('/lib/img/w01-left.png');
+                background-repeat: repeat-y;
+                background-position: top left;
+                background-size: 21px 100%;
+            }
+            &:after {
+                position: absolute;
+                content: "";
+                display: block;
+                width: 21px;
+                height: 100%;
+                right: -21px;
+                top: 0;
+                background-image: url('/lib/img/w01-right.png');
+                background-repeat: repeat-y;
+                background-position: top left;
+                background-size: 21px 100%;
+            }
+        }
+    }
+
+    &[hidden] {
+        display: none;
     }
 }
 

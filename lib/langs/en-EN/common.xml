@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <resource KEY="OPEN_BUTTON_TITLE" CST="true" SST="false" TIR="true">Ouvrir FoE Tool</resource>
+  <resource KEY="WINDOW_TITLE_PREFIX" CST="true" SST="false" TIR="true">FoE Tool</resource>
 </resources>

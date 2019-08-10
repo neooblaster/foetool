@@ -39,6 +39,9 @@ web page. Check in the browser toolbar if the userscript is executed :
 (function() {
     'use strict';
 
+    // Création d'un timestamp
+    let now = new Date();
+
     // Creation d'un pont
     let bridge = document.createElement('script');
     bridge.setAttribute('id', 'FOETOOL');
@@ -48,7 +51,7 @@ web page. Check in the browser toolbar if the userscript is executed :
     // Chargement de la feuille de style
     let stylesheet = document.createElement('link');
     stylesheet.setAttribute('rel', 'stylesheet');
-    stylesheet.setAttribute('href', 'https://foe.neoblaster.fr/lib/css/foe.css');
+    stylesheet.setAttribute('href', `https://foe.neoblaster.fr/lib/css/foe.css?${now.getTime()}`);
     document.head.appendChild(stylesheet);
 
     // Bridging des libs

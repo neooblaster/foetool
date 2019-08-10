@@ -2,7 +2,8 @@
 <packs>
   <fr-FR>
     <file-common.xml>
-      <hash KEY="K_OPEN_BUTTON_TITLE">a76496df5ac02e81b366aa2a24c37128</hash>
+      <hash KEY="K_OPEN_BUTTON_TITLE">e07399f80c0c46a24dd055d75f956d20</hash>
+      <hash KEY="K_WINDOW_TITLE_PREFIX">b4bf18e2031e032f3dc2b1590efe922a</hash>
     </file-common.xml>
   </fr-FR>
 </packs>
