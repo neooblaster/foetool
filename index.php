@@ -19,22 +19,5 @@
 </head>
 <body id="FoEToolIndexPage" onload="bootstrap();">
     <h1><img src="lib/img/foe-logo.png" alt="Forge Of Empire Tool"></h1>
-
-
-
-    <div id="FOETWindows">
-        <div>
-            <h1>
-                FoE Tool - Event Quests
-            </h1>
-            <div>
-                Navigate
-            </div>
-        </div>
-    </div>
-
-
-
-
 </body>
 </html>
