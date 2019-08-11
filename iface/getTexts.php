@@ -48,4 +48,8 @@ $moteur->set_output_name('text.json');
 $moteur->set_temporary_repository(__ROOT__ . '/var/tmp');
 $moteur->set_var('TEXTS', $clientText);
 $moteur->render();
+
+// Allow Cross Origin for Forge Of Empire
+header('Access-Control-Allow-Origin: *');
+
 $moteur->display();
