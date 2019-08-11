@@ -39,7 +39,7 @@
 
 #FOETWindows {
     font-family: Arial, sans-serif;
-    position: fixed;
+    position: absolute;
     z-index: 10000;
     width: @windowsWidth;
     height: @windowsHeight;
@@ -82,7 +82,7 @@
 
         & > h1 {
             position: absolute;
-            top: -10px;
+            top: -22px;
             width: @windowsWidth - 20px;
             height: @windowsHeaderHeight;
             background-image: url('/lib/img/w01-top.png');
@@ -118,6 +118,26 @@
                 background-image: url('/lib/img/w01-top-right.png');
                 background-repeat: no-repeat;
                 background-position: top;
+            }
+
+            span { //https://foefr.innogamescdn.com/assets/shared/gui/chat/chat_0.png?2f8d35ecf
+                position: absolute;
+                top: (@windowsHeaderHeight / 2) - 9px;
+                right: 0;
+                display: block;
+                width: 18px;
+                height: 18px;
+                background-image: url('https://foefr.innogamescdn.com/assets/shared/gui/chat/chat_0.png');
+                background-position: -210px -226px;
+                background-repeat: no-repeat;
+                cursor: pointer;
+
+                &:hover {
+                    background-position: -230px -226px;
+                }
+                &:active {
+                    background-position: -250px -224px;
+                }
             }
         }
         & > div {
@@ -173,6 +193,15 @@
     h1 {
         margin: auto;
         text-align: center;
+    }
+
+    // Customization or fix for foe.neoblaster.fr
+    #FOETWindows {
+        & > div {
+            & > h1 {
+                top: -10px;
+            }
+        }
     }
 }
 
