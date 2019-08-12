@@ -17,9 +17,25 @@
  *
  *
  */
+// Get PDO Socket
+require_once __ROOT__ . '/init/init.pdo.php';
+
+// Load Resource Files
+$resources = json_decode(file_get_contents(__ROOT__ . '/etc/resources.json'), true);
+
+
+// Load Contents from database
+try {
+    $stmt = $pdo->prepare('SELECT * FROM content');
+    $stmt->execute();
+    $resources['content'] = $stmt->fetchAll(PDO::FETCH_ASSOC);
+} catch (PDOException $err) {
+
+}
+
 
 // Allow Cross Origin for Forge Of Empire
 header('Access-Control-Allow-Origin: *');
 
 // Expose Settings & Resources
-echo file_get_contents(__ROOT__ . '/etc/resources.json');
+echo json_encode($resources);

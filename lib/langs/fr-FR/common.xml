@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<resource KEY="OPEN_BUTTON_TITLE" CST="true" SST="false">Ouvrir FoE Tool</resource>
+	<resource KEY="CLOSE_BUTTON_TITLE" CST="true" SST="false">Fermer FoE Tool</resource>
 	<resource KEY="WINDOW_TITLE_PREFIX" CST="true" SST="false">FoE Tool</resource>
+
+	<resource KEY="CONTENT_GM" CST="true" SST="false">GM</resource>
+	<resource KEY="CONTENT_QUESTS" CST="true" SST="false">Quêtes</resource>
 </resources>
