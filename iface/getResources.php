@@ -41,7 +41,7 @@ try {
 
 // Load Content Options from database
 try {
-    $stmt = $pdo->prepare('SELECT * FROM content_option');
+    $stmt = $pdo->prepare('SELECT * FROM content_option WHERE ENABLED = 1');
     $stmt->execute();
     $resources['contentOptions'] = $stmt->fetchAll(PDO::FETCH_ASSOC);
 } catch(PDOException $err){
