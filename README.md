@@ -2,8 +2,24 @@
 
 > FoE integrated tool for quests
 
+[FoeToolButton]: lib/img/docs/FoEToolButton.png 
+
 
 ## Presentation
+
+FoE Tool is a little application made to be integrated directly in the game.
+The application is fully isolated. It does not access to any data of your account.
+In the future, you will be able to manipulate tool data, but these datas are stored
+in a database on a dedicated server. You can find the dedicated page
+of the application here : [https://foe.neoblaster.fr](https://foe.neoblaster.fr)
+
+The aim of this tool is to get access to Wiki informations without leaving the game.
+To get the tool, please follow installation instruction which follows this chapter.
+
+Once installed, you will find a new button on **Forge Of Empire** :
+
+![FoE Tool Button][FoeToolButton]
+
 
 
 

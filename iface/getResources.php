@@ -21,15 +21,30 @@
 require_once __ROOT__ . '/init/init.pdo.php';
 
 // Load Resource Files
+$version = json_decode(file_get_contents(__ROOT__ . '/etc/version.json'), true);
 $resources = json_decode(file_get_contents(__ROOT__ . '/etc/resources.json'), true);
+$resources = array_replace_recursive($resources, $version);
 
 
 // Load Contents from database
 try {
-    $stmt = $pdo->prepare('SELECT * FROM content');
+    $stmt = $pdo->prepare('SELECT * FROM content WHERE ENABLED = 1');
     $stmt->execute();
     $resources['content'] = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    array_rmap(function ($content) {
+        $content['ENABLED'] = ord($content['ENABLED']);
+        return $content;
+    }, $resources['content']);
 } catch (PDOException $err) {
+
+}
+
+// Load Content Options from database
+try {
+    $stmt = $pdo->prepare('SELECT * FROM content_option');
+    $stmt->execute();
+    $resources['contentOptions'] = $stmt->fetchAll(PDO::FETCH_ASSOC);
+} catch(PDOException $err){
 
 }
 

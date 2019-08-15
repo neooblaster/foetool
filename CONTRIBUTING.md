@@ -15,7 +15,7 @@ Please refer to the **annexes** sections to follow install instructions.
 Once you installed tools, you will need to perform the following command
 to get **PHP** dependencies.
 
-```
+```bash
 composer install
 ```
 

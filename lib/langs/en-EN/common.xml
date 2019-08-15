@@ -2,4 +2,13 @@
 <resources>
   <resource KEY="OPEN_BUTTON_TITLE" CST="true" SST="false" TIR="true">Ouvrir FoE Tool</resource>
   <resource KEY="WINDOW_TITLE_PREFIX" CST="true" SST="false" TIR="true">FoE Tool</resource>
+  <resource KEY="CLOSE_BUTTON_TITLE" CST="true" SST="false" TIR="true">Fermer FoE Tool</resource>
+  <resource KEY="TOOL_UPDATED" CST="true" SST="false" TIR="true">Nouvelle version de l'outil disponible. Videz le cache du plugin</resource>
+  <resource KEY="CONTENT_GM" CST="true" SST="false" TIR="true">GM</resource>
+  <resource KEY="CONTENT_QUESTS" CST="true" SST="false" TIR="true">Quêtes</resource>
+  <resource KEY="CONTENT_COLONY" CST="true" SST="false" TIR="true">Colonies</resource>
+  <resource KEY="CONTENT_BUILDING" CST="true" SST="false" TIR="true">Bâtiments</resource>
+  <resource KEY="COLONY_VIKING" CST="true" SST="false" TIR="true">Colonie Viking</resource>
+  <resource KEY="COLONY_JAPANESE" CST="true" SST="false" TIR="true">Colonie Japonaise</resource>
+  <resource KEY="COLONY_EGYPTIAN" CST="true" SST="false" TIR="true">Colonie Egyptienne</resource>
 </resources>

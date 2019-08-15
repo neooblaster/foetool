@@ -3,7 +3,16 @@
   <fr-FR>
     <file-common.xml>
       <hash KEY="K_OPEN_BUTTON_TITLE">e07399f80c0c46a24dd055d75f956d20</hash>
-      <hash KEY="K_WINDOW_TITLE_PREFIX">b4bf18e2031e032f3dc2b1590efe922a</hash>
+      <hash KEY="K_WINDOW_TITLE_PREFIX">05abd0fece1079c442e173146feb6873</hash>
+      <hash KEY="K_CLOSE_BUTTON_TITLE">67c251309c986d711aaa1a6ca7f51ed8</hash>
+      <hash KEY="K_TOOL_UPDATED">928ddf4b4c57274c0d9ff4fcdef652af</hash>
+      <hash KEY="K_CONTENT_GM">5b053918c72e3ebece6b738fb296b2e3</hash>
+      <hash KEY="K_CONTENT_QUESTS">8c3213247444d97b55a51be158933982</hash>
+      <hash KEY="K_CONTENT_COLONY">86191abd75b65a80730cd38daa79bbef</hash>
+      <hash KEY="K_CONTENT_BUILDING">91422891ef844f3cfe70dcf549f8b05f</hash>
+      <hash KEY="K_COLONY_VIKING">5873b2835bf345fcc4a8f174dfb14f56</hash>
+      <hash KEY="K_COLONY_JAPANESE">b74f5f0bc547b75724d17e3a3ba14206</hash>
+      <hash KEY="K_COLONY_EGYPTIAN">b2455db304e4b3edd4bdf027087e3b73</hash>
     </file-common.xml>
   </fr-FR>
 </packs>

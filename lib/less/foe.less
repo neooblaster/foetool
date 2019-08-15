@@ -7,10 +7,12 @@
 @windowsWidth: 600px;
 @windowsHeight: 400px;
 @windowsHeaderHeight: 54px;
+@windowsNotifHeight: 32px;
 
 @titleColor: #f3d6a0;
 @textColor: #dcae58;
 @keywordColor: #dcae58;
+@linkColor: #cdd4e3;
 
 #FOETOpenButton {
     position: fixed !important;
@@ -94,6 +96,7 @@
             font-weight: 300;
             line-height: 1.1rem;
             padding: 19px 0 0;
+            .textShadow;
 
             &:before {
                 position: absolute;
@@ -120,23 +123,25 @@
                 background-position: top;
             }
 
-            span { //https://foefr.innogamescdn.com/assets/shared/gui/chat/chat_0.png?2f8d35ecf
-                position: absolute;
-                top: (@windowsHeaderHeight / 2) - 9px;
-                right: 0;
-                display: block;
-                width: 18px;
-                height: 18px;
-                background-image: url('https://foefr.innogamescdn.com/assets/shared/gui/chat/chat_0.png');
-                background-position: -210px -226px;
-                background-repeat: no-repeat;
-                cursor: pointer;
+            span {
+                &#closeButton {
+                    position: absolute;
+                    top: (@windowsHeaderHeight / 2) - 9px;
+                    right: 0;
+                    display: block;
+                    width: 18px;
+                    height: 18px;
+                    background-image: url('https://foefr.innogamescdn.com/assets/shared/gui/chat/chat_0.png');
+                    background-position: -210px -226px;
+                    background-repeat: no-repeat;
+                    cursor: pointer;
 
-                &:hover {
-                    background-position: -230px -226px;
-                }
-                &:active {
-                    background-position: -250px -224px;
+                    &:hover {
+                        background-position: -230px -226px;
+                    }
+                    &:active {
+                        background-position: -250px -224px;
+                    }
                 }
             }
         }
@@ -172,11 +177,92 @@
                 background-position: top left;
                 background-size: 21px 100%;
             }
+
+            #menu {
+                display: flex;
+
+                & > div {
+                    flex: 1;
+                    background-image: url('/lib/img/b01-bg.png');
+                    background-repeat: repeat-x;
+                    border-radius: 4px;
+                    padding: 3px 0;
+                    color: @linkColor;
+                    text-align: center;
+                    cursor: pointer;
+                    margin: 0 5px;
+                    box-shadow: 1px 0 2px black, 0 1px 2px black, -1px 0 2px black, 0 -1px 2px black;
+                    font-size: 0.9rem;
+                    font-weight: bold;
+
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    &:hover {
+                        background-position: 0 -68px;
+                    }
+                    &.active {
+                        background-position: 0 -34px;
+                    }
+                }
+            }
+            #content {
+
+            }
+        }
+        & > footer {
+            position: absolute;
+            display: none;
+            width: 100%;
+            padding: 4px 6px;
+            left: -6px;
+            bottom: 15px;
+            border-radius: 0 0 4px 4px;
+            z-index: 10001;
+            border-top: 1px solid black;
+            font-size: 0.9rem;
+            .textShadow;
         }
     }
 
     &[hidden] {
         display: none;
+    }
+
+    &.notified {
+        & > div {
+            & > div {
+            }
+            & > footer {
+                display: block;
+                color: white;
+            }
+        }
+
+        &.info {
+            & > div > footer {
+                background: #78b2e3;
+            }
+        }
+
+        &.success {
+            & > div > footer {
+                background: #76bd1b;
+            }
+        }
+        &.warn {
+            & > div > footer {
+                background: #ce6221;
+            }
+        }
+        &.error {
+            & > div > footer {
+                background: #a40000;
+            }
+        }
     }
 }
 
@@ -332,4 +418,8 @@
             }
         }
     }
+}
+
+.textShadow {
+    text-shadow: 1px 0 1px #303030,0 1px 1px #303030, -1px 0 1px #303030, 0 -1px 1px #303030;
 }
