@@ -8,5 +8,8 @@
             {"path": "clanflags", "name": "flag_20.jpg", "desc": "Epicure Flag"}
         ]
     },
-    "spritesheet": 0
+    "spritesheet": 0,
+    "sections": [],
+    "sectionOptions": [],
+    "plugins": []
 }

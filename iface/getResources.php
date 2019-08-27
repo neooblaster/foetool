@@ -25,25 +25,65 @@ $version = json_decode(file_get_contents(__ROOT__ . '/etc/version.json'), true);
 $resources = json_decode(file_get_contents(__ROOT__ . '/etc/resources.json'), true);
 $resources = array_replace_recursive($resources, $version);
 
+$sectionsId = [];
 
-// Load Contents from database
+
+// Load Sections from database
 try {
-    $stmt = $pdo->prepare('SELECT * FROM content WHERE ENABLED = 1');
+    $stmt = $pdo->prepare('SELECT * FROM sections WHERE enabled = 1');
     $stmt->execute();
-    $resources['content'] = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    array_rmap(function ($content) {
-        $content['ENABLED'] = ord($content['ENABLED']);
-        return $content;
-    }, $resources['content']);
+    $sections = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    array_rmap(function ($section) use (&$sectionsId) {
+        $sectionsId[] = $section['id'];
+        $section['enabled'] = ord($section['enabled']);
+        return $section;
+    }, $sections);
+
+    foreach ($sections as $section) {
+        $resources['sections'][] = $section;
+    }
 } catch (PDOException $err) {
 
 }
 
-// Load Content Options from database
+// Load Sections Options from database only for enabled sections
+if (count($sectionsId) > 0) {
+    try {
+        $sectionList = join(',', $sectionsId);
+        $stmt = $pdo->prepare(
+            "SELECT * FROM section_option WHERE section IN ($sectionList) and enabled = 1"
+        );
+        $stmt->execute();
+        $plugins = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        array_rmap(function ($options) {
+            $options['enabled'] = ord($options['enabled']);
+            return $options;
+        }, $plugins);
+
+        foreach ($plugins as $plugin) {
+            $resources['sectionOptions'][] = $plugin;
+        }
+    } catch(PDOException $err){
+
+    }
+}
+
+// Load Registred Plugins
 try {
-    $stmt = $pdo->prepare('SELECT * FROM content_option WHERE ENABLED = 1');
+    $stmt = $pdo->prepare('SELECT * FROM plugin WHERE enabled = 1');
     $stmt->execute();
-    $resources['contentOptions'] = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $plugins = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    array_rmap(function ($plugin) {
+        $plugin['enabled'] = ord($plugin['enabled']);
+        return $plugin;
+    }, $plugins);
+
+    foreach ($plugins as $plugin) {
+        $resources['plugins'][] = $plugin;
+    }
 } catch(PDOException $err){
 
 }
