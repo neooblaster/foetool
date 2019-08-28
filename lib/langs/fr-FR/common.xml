@@ -1,20 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<resource KEY="OPEN_BUTTON_TITLE" CST="true" SST="false">Ouvrir FoE Tool</resource>
-	<resource KEY="CLOSE_BUTTON_TITLE" CST="true" SST="false">Fermer FoE Tool</resource>
-	<resource KEY="WINDOW_TITLE_PREFIX" CST="true" SST="false">FoE Tool</resource>
-	<resource KEY="TOOL_UPDATED" CST="true" SST="false">Nouvelle version de l'outil disponible. Videz le cache du plugin</resource>
+    <!-- Général -->
+    <resource KEY="OPEN_BUTTON_TITLE" CST="true" SST="false">Ouvrir FoE Tool</resource>
+    <resource KEY="CLOSE_BUTTON_TITLE" CST="true" SST="false">Fermer FoE Tool</resource>
+    <resource KEY="WINDOW_TITLE_PREFIX" CST="true" SST="false">FoE Tool (Alpha)</resource>
+    <resource KEY="TOOL_UPDATED" CST="true" SST="false">Nouvelle version de l'outil disponible. Videz le cache du plugin</resource>
 
-	<resource KEY="SECTION_GM" CST="true" SST="false">GM</resource>
-	<resource KEY="SECTION_QUESTS" CST="true" SST="false">Quêtes</resource>
-	<resource KEY="SECTION_COLONY" CST="true" SST="false">Colonies</resource>
-	<resource KEY="SECTION_BUILDING" CST="true" SST="false">Bâtiments</resource>
-	<resource KEY="SECTION_TOOL" CST="true" SST="false">Outils</resource>
+    <!-- Sections -->
+    <resource KEY="SECTION_GM" CST="true" SST="false">GM</resource>
+    <resource KEY="SECTION_QUESTS" CST="true" SST="false">Quêtes</resource>
+    <resource KEY="SECTION_COLONY" CST="true" SST="false">Colonies</resource>
+    <resource KEY="SECTION_BUILDING" CST="true" SST="false">Bâtiments</resource>
+    <resource KEY="SECTION_TOOL" CST="true" SST="false">Outils</resource>
 
-	<resource KEY="COLONY_VIKING" CST="true" SST="false">Colonie Viking</resource>
-	<resource KEY="COLONY_JAPANESE" CST="true" SST="false">Colonie Japonaise</resource>
-	<resource KEY="COLONY_EGYPTIAN" CST="true" SST="false">Colonie Egyptienne</resource>
+    <!-- Section : Colonies -->
+    <resource KEY="COLONY_VIKING" CST="true" SST="false">Colonie Viking</resource>
+    <resource KEY="COLONY_VIKING_TTL" CST="true" SST="false">Colonie Viking</resource>
+    <resource KEY="COLONY_JAPANESE" CST="true" SST="false">Colonie Japonaise</resource>
+    <resource KEY="COLONY_JAPANESE_TTL" CST="true" SST="false">Colonie Japonaise</resource>
+    <resource KEY="COLONY_EGYPTIAN" CST="true" SST="false">Colonie Egyptienne</resource>
+    <resource KEY="COLONY_EGYPTIAN_TTL" CST="true" SST="false">Colonie Egyptienne</resource>
 
-	<resource KEY="PF_DISPATCHER" CST="true" SST="false">Mon dispatch de PF</resource>
+    <!-- Section : Outils -->
+    <resource KEY="PF_DISPATCHER" CST="true" SST="false">Dispatch des PFs</resource>
+    <resource KEY="PF_DISPATCHER_TTL" CST="true" SST="false">Dispatch des PFs</resource>
+    <resource KEY="RES_DISPATCHER" CST="true" SST="false">Répartition Ressources (Soon) </resource>
+    <resource KEY="RES_DISPATCHER_TTL" CST="true" SST="false">Répartition Ressources (Soon) </resource>
+    <resource KEY="YIELD" CST="true" SST="false">Rentabilités (Soon) </resource>
+    <resource KEY="YIELD_TTL" CST="true" SST="false">Rentabilités (Soon) </resource>
+    <resource KEY="GM_CONTRIB" CST="true" SST="false">Investissement GM (Soon) </resource>
+    <resource KEY="GM_CONTRIB_TTL" CST="true" SST="false">Investissement GM (Soon) </resource>
 
 </resources>

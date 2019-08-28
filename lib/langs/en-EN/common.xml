@@ -1,16 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <resource KEY="OPEN_BUTTON_TITLE" CST="true" SST="false" TIR="true">Ouvrir FoE Tool</resource>
-  <resource KEY="WINDOW_TITLE_PREFIX" CST="true" SST="false" TIR="true">FoE Tool</resource>
   <resource KEY="CLOSE_BUTTON_TITLE" CST="true" SST="false" TIR="true">Fermer FoE Tool</resource>
+  <resource KEY="WINDOW_TITLE_PREFIX" CST="true" SST="false" TIR="true">FoE Tool (Alpha)</resource>
   <resource KEY="TOOL_UPDATED" CST="true" SST="false" TIR="true">Nouvelle version de l'outil disponible. Videz le cache du plugin</resource>
-  <resource KEY="COLONY_VIKING" CST="true" SST="false" TIR="true">Colonie Viking</resource>
-  <resource KEY="COLONY_JAPANESE" CST="true" SST="false" TIR="true">Colonie Japonaise</resource>
-  <resource KEY="COLONY_EGYPTIAN" CST="true" SST="false" TIR="true">Colonie Egyptienne</resource>
   <resource KEY="SECTION_GM" CST="true" SST="false" TIR="true">GM</resource>
   <resource KEY="SECTION_QUESTS" CST="true" SST="false" TIR="true">Quêtes</resource>
   <resource KEY="SECTION_COLONY" CST="true" SST="false" TIR="true">Colonies</resource>
   <resource KEY="SECTION_BUILDING" CST="true" SST="false" TIR="true">Bâtiments</resource>
   <resource KEY="SECTION_TOOL" CST="true" SST="false" TIR="true">Outils</resource>
-  <resource KEY="PF_DISPATCHER" CST="true" SST="false" TIR="true">Mon dispatch de PF</resource>
+  <resource KEY="COLONY_VIKING" CST="true" SST="false" TIR="true">Colonie Viking</resource>
+  <resource KEY="COLONY_JAPANESE" CST="true" SST="false" TIR="true">Colonie Japonaise</resource>
+  <resource KEY="COLONY_EGYPTIAN" CST="true" SST="false" TIR="true">Colonie Egyptienne</resource>
+  <resource KEY="PF_DISPATCHER" CST="true" SST="false" TIR="true">Dispatch des PFs</resource>
+  <resource KEY="COLONY_VIKING_TTL" CST="true" SST="false" TIR="true">Colonie Viking</resource>
+  <resource KEY="COLONY_JAPANESE_TTL" CST="true" SST="false" TIR="true">Colonie Japonaise</resource>
+  <resource KEY="COLONY_EGYPTIAN_TTL" CST="true" SST="false" TIR="true">Colonie Egyptienne</resource>
+  <resource KEY="PF_DISPATCHER_TTL" CST="true" SST="false" TIR="true">Dispatch des PFs</resource>
+  <resource KEY="RES_DISPATCHER" CST="true" SST="false" TIR="true">Répartition Ressources (Soon) </resource>
+  <resource KEY="RES_DISPATCHER_TTL" CST="true" SST="false" TIR="true">Répartition Ressources (Soon) </resource>
+  <resource KEY="YIELD" CST="true" SST="false" TIR="true">Rentabilités (Soon) </resource>
+  <resource KEY="YIELD_TTL" CST="true" SST="false" TIR="true">Rentabilités (Soon) </resource>
+  <resource KEY="GM_CONTRIB" CST="true" SST="false" TIR="true">Investissement GM (Soon) </resource>
+  <resource KEY="GM_CONTRIB_TTL" CST="true" SST="false" TIR="true">Investissement GM (Soon) </resource>
 </resources>

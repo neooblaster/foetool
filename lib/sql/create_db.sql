@@ -7,6 +7,7 @@ create table content_plugin
     primary key,
   section_option tinyint(3) unsigned null,
   plugin tinyint(3) unsigned null,
+  enabled bit null,
   constraint content_plugin_id_uindex
   unique (id)
 )
@@ -53,6 +54,7 @@ create table section_option
   section tinyint(3) unsigned not null,
   content_type tinyint(3) unsigned null,
   name tinytext not null,
+  `desc` tinytext null,
   enabled bit null,
   constraint content_option_ID_uindex
   unique (id),
@@ -92,6 +94,8 @@ foreign key (section) references sections (id)
 
 
 
+
+
 -- ------------------------------------------------------------ --
 -- ---------------------[ Technical Data  ]-------------------- --
 -- ------------------------------------------------------------ --
@@ -101,15 +105,39 @@ INSERT INTO content_type (id, type) VALUES (null, 'plugin');
 
 -- ------------------------------------------------------------ --
 -- ---------------------[   Sample Data   ]-------------------- --
--- ------------------------------------------------------------ --
-INSERT INTO sections (id, name, enabled) VALUES (null, 'SECTION_GM', 1);        -- 1
-INSERT INTO sections (id, name, enabled) VALUES (null, 'SECTION_QUEST', 1);     -- 2
-INSERT INTO sections (id, name, enabled) VALUES (null, 'SECTION_COLONY', 1);    -- 3
-INSERT INTO sections (id, name, enabled) VALUES (null, 'SECTION_BUILDING', 1);  -- 4
-INSERT INTO sections (id, name, enabled) VALUES (null, 'SECTION_TOOL', 1);      -- 5
+-- ------------------------------------------------------------ -- ---------------------------- -- Auto-Increment:
+                                                                                                -- sections.id :
+INSERT INTO sections (id, name, enabled) VALUES (null, 'SECTION_GM', 1);                        -- 1
+INSERT INTO sections (id, name, enabled) VALUES (null, 'SECTION_QUEST', 1);                     -- 2
+INSERT INTO sections (id, name, enabled) VALUES (null, 'SECTION_COLONY', 1);                    -- 3
+INSERT INTO sections (id, name, enabled) VALUES (null, 'SECTION_BUILDING', 1);                  -- 4
+INSERT INTO sections (id, name, enabled) VALUES (null, 'SECTION_TOOL', 1);                      -- 5
 
-INSERT INTO section_option (id, section, name, enabled) VALUES (null, 3, 'COLONY_VIKING', 1);
-INSERT INTO section_option (id, section, name, enabled) VALUES (null, 3, 'COLONY_JAPANESE', 1);
-INSERT INTO section_option (id, section, name, enabled) VALUES (null, 3, 'COLONY_EGYPTIAN', 1);
+                                                                                                -- section_option.id :
+INSERT INTO section_option (id, section, name, `desc`, enabled) VALUES (                        -- 1
+  null, 3, 'COLONY_VIKING', 'COLONY_VIKING_TTL', 1
+);
+INSERT INTO section_option (id, section, name, `desc`, enabled) VALUES (                        -- 2
+  null, 3, 'COLONY_JAPANESE', 'COLONY_JAPANESE_TTL', 1
+);
+INSERT INTO section_option (id, section, name, `desc`, enabled) VALUES (                        -- 3
+  null, 3, 'COLONY_EGYPTIAN', 'COLONY_EGYPTIAN_TTL', 1
+);
+INSERT INTO section_option (id, section, name, `desc`, enabled) VALUES (                        -- 4
+  null, 5, 'PF_DISPATCHER', 'PF_DISPATCHER_TTL', 1
+);
+INSERT INTO section_option (id, section, name, `desc`, enabled) VALUES (                        -- 5
+  null, 5, 'RES_DISPATCHER', 'RES_DISPATCHER_TTL', 1
+);
+INSERT INTO section_option (id, section, name, `desc`, enabled) VALUES (                        -- 6
+  null, 5, 'YIELD', 'YIELD_TTL', 1
+);
+INSERT INTO section_option (id, section, name, `desc`, enabled) VALUES (                        -- 7
+  null, 5, 'GM_CONTRIB', 'GM_CONTRIB_TTL', 1
+);
 
-INSERT INTO plugin (id, name, enabled) VALUES(null, 'PfDispatcher', 1);
+                                                                                                -- plugin.id :
+INSERT INTO plugin (id, name, enabled) VALUES(null, 'PfDispatcher', 1);                         -- 1
+
+                                                                                                -- content_plugin.id :
+INSERT INTO content_plugin (id, section_option, plugin, enabled) VALUES (null, 4, 1, 1);        -- 1

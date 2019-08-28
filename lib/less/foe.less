@@ -212,17 +212,22 @@
                     }
                 }
             }
-            #content {
+            #wrapper {
                 height: calc(~'100% - @{menuHeight} - 8px');
                 margin-top: 5px;
+                overflow: hidden;
 
-                &.options {
+                #options {
+                    position: relative;
+                    height: 100%;
+                    right: 0;
                     display: flex;
                     flex-wrap: wrap;
                     overflow: auto;
                     overflow: -moz-scrollbars-none;
                     -ms-overflow-style: none;
                     align-content: flex-start;
+                    transition: right .2s;
 
                     &::-webkit-scrollbar {
                         width: 0;
@@ -259,6 +264,21 @@
                         &:hover {
                             background: #955e32C8;
                         }
+                    }
+                }
+
+                #content {
+                    position: relative;
+                    height: 100%;
+                    bottom: 100%;
+                    left: 100%;
+                    transition: left .2s;
+                    overflow: auto;
+                    -ms-overflow-style: none;
+                    overflow: -moz-scrollbars-none;
+
+                    &::-webkit-scrollbar {
+                        width: 0;
                     }
                 }
             }
@@ -311,6 +331,23 @@
         &.error {
             & > div > footer {
                 background: #a40000;
+            }
+        }
+    }
+
+    &.content {
+        & > div {
+            & > div {
+                #wrapper {
+                    #options {
+                        right: 100%;
+                        transition: right .2s;
+                    }
+                    #content {
+                        left: 0;
+                        transition: left .2s;
+                    }
+                }
             }
         }
     }

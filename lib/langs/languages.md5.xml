@@ -3,16 +3,28 @@
   <fr-FR>
     <file-common.xml>
       <hash KEY="K_OPEN_BUTTON_TITLE">e07399f80c0c46a24dd055d75f956d20</hash>
-      <hash KEY="K_WINDOW_TITLE_PREFIX">05abd0fece1079c442e173146feb6873</hash>
-      <hash KEY="K_CLOSE_BUTTON_TITLE">67c251309c986d711aaa1a6ca7f51ed8</hash>
-      <hash KEY="K_TOOL_UPDATED">928ddf4b4c57274c0d9ff4fcdef652af</hash>
-      <hash KEY="K_CONTENT_GM">5b053918c72e3ebece6b738fb296b2e3</hash>
-      <hash KEY="K_CONTENT_QUESTS">8c3213247444d97b55a51be158933982</hash>
-      <hash KEY="K_CONTENT_COLONY">86191abd75b65a80730cd38daa79bbef</hash>
-      <hash KEY="K_CONTENT_BUILDING">91422891ef844f3cfe70dcf549f8b05f</hash>
-      <hash KEY="K_COLONY_VIKING">5873b2835bf345fcc4a8f174dfb14f56</hash>
-      <hash KEY="K_COLONY_JAPANESE">b74f5f0bc547b75724d17e3a3ba14206</hash>
-      <hash KEY="K_COLONY_EGYPTIAN">b2455db304e4b3edd4bdf027087e3b73</hash>
+      <hash KEY="K_CLOSE_BUTTON_TITLE">bb26288a1e77ab3e9b53389d07be51d6</hash>
+      <hash KEY="K_WINDOW_TITLE_PREFIX">abc0dcbbeb10b1e3ab48acf0d40cde21</hash>
+      <hash KEY="K_TOOL_UPDATED">054deb733f5cd46dd59a8d55c5168f33</hash>
+      <hash KEY="K_SECTION_GM">009ee78cfdb96382755956afca886f94</hash>
+      <hash KEY="K_SECTION_QUESTS">d8aa418e9f1b62c0ed92466da544bb7f</hash>
+      <hash KEY="K_SECTION_COLONY">8ea2936485b8afbb3f241490eab9f250</hash>
+      <hash KEY="K_SECTION_BUILDING">a5be35e525e33fb2297ab95bf33e7614</hash>
+      <hash KEY="K_SECTION_TOOL">d96d749077fcfc375b0dfe4ade98e8d8</hash>
+      <hash KEY="K_COLONY_VIKING">a36da4ab0ffd90643b25c3ea87e560fd</hash>
+      <hash KEY="K_COLONY_JAPANESE">b72a12564b43611e302a7d2a5fdb8f95</hash>
+      <hash KEY="K_COLONY_EGYPTIAN">cf5b2e25a5df54a7d2ea6de7fbb4939b</hash>
+      <hash KEY="K_PF_DISPATCHER">21164ad36b2b1314363aa0db36c7036a</hash>
+      <hash KEY="K_COLONY_VIKING_TTL">5873b2835bf345fcc4a8f174dfb14f56</hash>
+      <hash KEY="K_COLONY_JAPANESE_TTL">b74f5f0bc547b75724d17e3a3ba14206</hash>
+      <hash KEY="K_COLONY_EGYPTIAN_TTL">b2455db304e4b3edd4bdf027087e3b73</hash>
+      <hash KEY="K_PF_DISPATCHER_TTL">bb3bb3814388c9f4fe68bb61fa4cf8b7</hash>
+      <hash KEY="K_RES_DISPATCHER">923458a4642c10795bc1f5099212f817</hash>
+      <hash KEY="K_RES_DISPATCHER_TTL">923458a4642c10795bc1f5099212f817</hash>
+      <hash KEY="K_YIELD">4c80ae2da405c685b64655c3d0979aa1</hash>
+      <hash KEY="K_YIELD_TTL">4c80ae2da405c685b64655c3d0979aa1</hash>
+      <hash KEY="K_GM_CONTRIB">594dfa0bf576ed1bc94655bf17bdd8a3</hash>
+      <hash KEY="K_GM_CONTRIB_TTL">594dfa0bf576ed1bc94655bf17bdd8a3</hash>
     </file-common.xml>
   </fr-FR>
 </packs>

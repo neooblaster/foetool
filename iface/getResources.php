@@ -26,6 +26,7 @@ $resources = json_decode(file_get_contents(__ROOT__ . '/etc/resources.json'), tr
 $resources = array_replace_recursive($resources, $version);
 
 $sectionsId = [];
+$optionsId = [];
 
 
 // Load Sections from database
@@ -48,7 +49,7 @@ try {
 }
 
 // Load Sections Options from database only for enabled sections
-if (count($sectionsId) > 0) {
+if (count($sectionsId)) {
     try {
         $sectionList = join(',', $sectionsId);
         $stmt = $pdo->prepare(
@@ -57,7 +58,8 @@ if (count($sectionsId) > 0) {
         $stmt->execute();
         $plugins = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-        array_rmap(function ($options) {
+        array_rmap(function ($options) use (&$optionsId) {
+            $optionsId[] = $options['id'];
             $options['enabled'] = ord($options['enabled']);
             return $options;
         }, $plugins);
@@ -88,9 +90,42 @@ try {
 
 }
 
+// Load Content Type
+try {
+    $stmt = $pdo->prepare('SELECT * FROM content_type');
+    $stmt->execute();
+    $contentTypes = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $resources['contentTypes'] = $contentTypes;
+} catch(PDOException $err){
+
+}
+
+// Load Contents
+if (count($optionsId)) {
+    $optionList = join(',', $optionsId);
+
+    // Load Content Plugin
+    try {
+        $stmt = $pdo->prepare(
+            "SELECT * FROM content_plugin WHERE section_option IN ($optionList) and enabled = 1"
+        );
+        $stmt->execute();
+        $contentPlugin = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        array_rmap(function ($contentPlugin) {
+            $contentPlugin['enabled'] = ord($contentPlugin['enabled']);
+            return $contentPlugin;
+        }, $contentPlugin);
+
+        $resources['contentPlugins'] = $contentPlugin;
+    } catch (PDOException $err) {
+
+    }
+}
+
 
 // Allow Cross Origin for Forge Of Empire
 header('Access-Control-Allow-Origin: *');
 
 // Expose Settings & Resources
-echo json_encode($resources);
+echo json_encode($resources, JSON_NUMERIC_CHECK);
