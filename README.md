@@ -49,6 +49,7 @@ web page. Check in the browser toolbar if the userscript is executed :
 // @grant        none
 // @require      https://rawcdn.githack.com/neooblaster/HTML/aa9263b08705a9676416f2ba64b474daa3a62945/release/v1.4.0/HTML.min.js
 // @require      https://rawcdn.githack.com/neooblaster/xhrQuery/fca64541aa77d64ba726db83e7fb2dd6fa218e30/releases/v1.4.0/xhrQuery.min.js
+// @require      https://cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js
 // @require      https://foe.neoblaster.fr/lib/js/foetool.js
 // ==/UserScript==
 
