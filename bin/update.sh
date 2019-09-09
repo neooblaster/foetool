@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
-git checkout -- ../
+DIRECTORY=`dirname $0`
+cd $DIRECTORY
+cd ..
+git update-index --assume-unchanged --skip-worktree -- etc/credentials.custom.json
+git checkout -- .
 git fetch --all
-git pull gh master
-./switchPrd.sh
+git pull gh latest
+sed -i -re "s/foedev/foe/" lib/js/foetool.js
 composer update
-chown -R www-data: ../var/tmp
+chown -R www-data: var/tmp
