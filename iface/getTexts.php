@@ -47,6 +47,7 @@ $moteur->set_template_file(__ROOT__ . '/lib/templates/texts.tpl.json');
 $moteur->set_output_name('text.json');
 $moteur->set_temporary_repository(__ROOT__ . '/var/tmp');
 $moteur->set_var('TEXTS', $clientText);
+$moteur->set_var('LANGUAGE', $syslang->getLanguage());
 $moteur->render();
 
 // Allow Cross Origin for Forge Of Empire

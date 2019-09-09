@@ -1,5 +1,7 @@
 {
-    <!-- BEGIN_BLOCK TEXTS -->
-    %COMMA%"%VAR_KEY%": "%VAR_VALUE%"
-    <!-- END_BLOCK TEXTS -->
+    "%LANGUAGE%": {
+        <!-- BEGIN_BLOCK TEXTS -->
+        %COMMA%"%VAR_KEY%": "%VAR_VALUE%"
+        <!-- END_BLOCK TEXTS -->
+    }
 }
