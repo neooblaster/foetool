@@ -25,7 +25,7 @@ function PfDispatcher (parent) {
     /**
      * @type {string} Version of the plugin.
      */
-    self.version = "0.1.0";
+    self.version = "0.1.1";
 
     /**
      * @type {Array} self.stylesheets  You stylesheet path located in root folder of the plugin.
@@ -245,7 +245,7 @@ function PfDispatcher (parent) {
              * @returns {number}
              */
             spentPart: function(part, spent) {
-                if (self.spent) {
+                if (spent) {
                     return Math.round((spent / self.totalSpent) * 10000) / 100;
                 } else {
                     return 0;

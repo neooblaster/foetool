@@ -1,1 +1,391 @@
-#FOETOpenButton{position:fixed!important;z-index:10000;right:10px;bottom:25px;cursor:pointer;position:relative;width:72px;height:72px;border:2px solid #bf8443;border-radius:45px}#FOETOpenButton:after{border-radius:49px}#FOETOpenButton:hover:before{border-radius:49px}#FOETOpenButton .InnerBorder1{border-radius:37px}#FOETOpenButton .InnerBorder1:after{border-radius:41px}#FOETOpenButton .InnerBorder1 .InnerBorder2{border-radius:29px}#FOETOpenButton .InnerBorder1 .InnerBorder2:before{border-radius:27px}#FOETOpenButton .InnerBorder1 .InnerBorder2:after{border-radius:33px}#FOETOpenButton:after{content:"";display:block;width:76px;height:76px;border:2px solid #3d2407;top:-4px;left:-4px;position:absolute}#FOETOpenButton:hover:before{content:"";display:block;background:rgba(255,255,255,.175);width:80px;height:80px;top:-4px;left:-4px;position:absolute;z-index:10001}#FOETOpenButton .InnerBorder1{position:relative;width:64px;height:64px;top:2px;left:2px;border:2px solid #6a401f}#FOETOpenButton .InnerBorder1:after{content:"";display:block;width:68px;height:68px;border:2px solid #885328;top:-4px;left:-4px;position:absolute}#FOETOpenButton .InnerBorder1 .InnerBorder2{position:relative;width:56px;height:56px;top:2px;left:2px;border:2px solid #261802}#FOETOpenButton .InnerBorder1 .InnerBorder2:before{content:"";display:block;background:#9d7e63;width:100%;height:100%;position:absolute}#FOETOpenButton .InnerBorder1 .InnerBorder2:after{content:"";display:block;width:60px;height:60px;border:2px solid #995f2e;top:-4px;left:-4px;position:absolute}#FOETOpenButton .InnerBorder1 .InnerBorder2 img{display:block;width:48px;height:48px;position:relative;overflow:visible;border:2px solid #97714e;left:2px;top:2px;border-radius:25px}#FOETWindows{font-family:Arial,sans-serif;position:absolute;z-index:10000;width:600px;height:400px;background-image:url(/lib/img/w01-bg.png)}#FOETWindows>div{position:relative;width:580px;left:10px;height:410px;background-image:url(/lib/img/w01-bottom.png);background-repeat:repeat-x;background-position:bottom;background-size:100% 21px}#FOETWindows>div:before{position:absolute;content:"";display:block;width:21px;left:-21px;top:0;height:410px;background-image:url(/lib/img/w01-bottom-left.png);background-repeat:no-repeat;background-position:bottom}#FOETWindows>div:after{position:absolute;content:"";display:block;width:21px;right:-21px;top:0;height:410px;background-image:url(/lib/img/w01-bottom-right.png);background-repeat:no-repeat;background-position:bottom}#FOETWindows>div>h1{position:absolute;top:-22px;width:580px;height:54px;background-image:url(/lib/img/w01-top.png);background-repeat:repeat-x;background-position:top;background-size:100% 54px;color:#f3d6a0;font-size:1.1rem;font-weight:300;line-height:1.1rem;padding:19px 0 0;text-shadow:1px 0 1px #303030,0 1px 1px #303030,-1px 0 1px #303030,0 -1px 1px #303030}#FOETWindows>div>h1:before{position:absolute;content:"";display:block;width:21px;left:-21px;top:0;height:54px;background-image:url(/lib/img/w01-top-left.png);background-repeat:no-repeat;background-position:top}#FOETWindows>div>h1:after{position:absolute;content:"";display:block;width:21px;right:-21px;top:0;height:54px;background-image:url(/lib/img/w01-top-right.png);background-repeat:no-repeat;background-position:top}#FOETWindows>div>h1 span#closeButton{position:absolute;top:18px;right:0;display:block;width:18px;height:18px;background-image:url(https://foefr.innogamescdn.com/assets/shared/gui/chat/chat_0.png);background-position:-210px -226px;background-repeat:no-repeat;cursor:pointer}#FOETWindows>div>h1 span#closeButton:hover{background-position:-230px -226px}#FOETWindows>div>h1 span#closeButton:active{background-position:-250px -224px}#FOETWindows>div>div{position:absolute;width:580px;height:345px;bottom:21px}#FOETWindows>div>div:before{position:absolute;content:"";display:block;width:21px;height:100%;left:-21px;top:0;background-image:url(/lib/img/w01-left.png);background-repeat:repeat-y;background-position:top left;background-size:21px 100%}#FOETWindows>div>div:after{position:absolute;content:"";display:block;width:21px;height:100%;right:-21px;top:0;background-image:url(/lib/img/w01-right.png);background-repeat:repeat-y;background-position:top left;background-size:21px 100%}#FOETWindows>div>div #menu{display:flex;height:22px}#FOETWindows>div>div #menu>div{flex:1;background-image:url(/lib/img/b01-bg.png);background-repeat:repeat-x;border-radius:4px;padding:3px 0;color:#cdd4e3;text-align:center;cursor:pointer;margin:0 5px;box-shadow:1px 0 2px #000,0 1px 2px #000,-1px 0 2px #000,0 -1px 2px #000;font-size:.9rem;font-weight:700}#FOETWindows>div>div #menu>div:first-child{margin-left:0}#FOETWindows>div>div #menu>div:last-child{margin-right:0}#FOETWindows>div>div #menu>div:hover{background-position:0 -68px}#FOETWindows>div>div #menu>div.active{background-position:0 -34px}#FOETWindows>div>div #wrapper{height:calc(100% - 22px - 8px);margin-top:5px;overflow:hidden}#FOETWindows>div>div #wrapper #options{position:relative;height:100%;right:0;display:flex;flex-wrap:wrap;overflow:auto;overflow:-moz-scrollbars-none;-ms-overflow-style:none;align-content:flex-start;transition:right .2s}#FOETWindows>div>div #wrapper #options::-webkit-scrollbar{width:0}#FOETWindows>div>div #wrapper #options .sectionOption{display:flex;align-items:center;background:#6E4C31C8;width:calc(50% - 5px - 2px);height:3rem;min-height:0;cursor:pointer;border-radius:4px;box-shadow:1px 0 2px #000,0 1px 2px #000,-1px 0 2px #000,0 -1px 2px #000;font-family:Book Antiqua,serif;text-shadow:2px 2px #000;color:#efdba6}#FOETWindows>div>div #wrapper #options .sectionOption:nth-child(odd){margin:5px 5px 5px 2px}#FOETWindows>div>div #wrapper #options .sectionOption:nth-child(even){margin:5px 0 5px 5px}#FOETWindows>div>div #wrapper #options .sectionOption span{display:inline-block;width:100%;text-align:center}#FOETWindows>div>div #wrapper #options .sectionOption:hover{background:#955e32C8}#FOETWindows>div>div #wrapper #content{position:relative;height:100%;bottom:100%;left:100%;transition:left .2s;overflow:auto;-ms-overflow-style:none;overflow:-moz-scrollbars-none}#FOETWindows>div>div #wrapper #content::-webkit-scrollbar{width:0}#FOETWindows>div>footer{position:absolute;display:none;width:100%;padding:4px 6px;left:-6px;bottom:15px;border-radius:0 0 4px 4px;z-index:10001;border-top:1px solid #000;font-size:.9rem;text-shadow:1px 0 1px #303030,0 1px 1px #303030,-1px 0 1px #303030,0 -1px 1px #303030}#FOETWindows[hidden]{display:none}#FOETWindows.notified>div>footer{display:block;color:#fff}#FOETWindows.notified.info>div>footer{background:#78b2e3}#FOETWindows.notified.success>div>footer{background:#76bd1b}#FOETWindows.notified.warn>div>footer{background:#ce6221}#FOETWindows.notified.error>div>footer{background:#a40000}#FOETWindows.content>div>div #wrapper #options{right:100%;transition:right .2s}#FOETWindows.content>div>div #wrapper #content{left:0;transition:left .2s}#FoEToolIndexPage{background-image:url(/lib/img/background.jpg);background-color:#223321}#FoEToolIndexPage *{margin:0;padding:0}#FoEToolIndexPage h1{margin:auto;text-align:center}#FoEToolIndexPage #FOETWindows>div>h1{top:-10px}.textShadow{text-shadow:1px 0 1px #303030,0 1px 1px #303030,-1px 0 1px #303030,0 -1px 1px #303030}
+#FOETOpenButton {
+  position: fixed !important;
+  z-index: 10000;
+  right: 10px;
+  bottom: 25px;
+  cursor: pointer;
+  position: relative;
+  width: 72px;
+  height: 72px;
+  border: 2px solid #bf8443;
+  border-radius: 45px;
+}
+#FOETOpenButton:after {
+  border-radius: 49px;
+}
+#FOETOpenButton:hover:before {
+  border-radius: 49px;
+}
+#FOETOpenButton .InnerBorder1 {
+  border-radius: 37px;
+}
+#FOETOpenButton .InnerBorder1:after {
+  border-radius: 41px;
+}
+#FOETOpenButton .InnerBorder1 .InnerBorder2 {
+  border-radius: 29px;
+}
+#FOETOpenButton .InnerBorder1 .InnerBorder2:before {
+  border-radius: 27px;
+}
+#FOETOpenButton .InnerBorder1 .InnerBorder2:after {
+  border-radius: 33px;
+}
+#FOETOpenButton:after {
+  content: "";
+  display: block;
+  width: 76px;
+  height: 76px;
+  border: 2px solid #3d2407;
+  top: -4px;
+  left: -4px;
+  position: absolute;
+}
+#FOETOpenButton:hover:before {
+  content: "";
+  display: block;
+  background: rgba(255, 255, 255, 0.175);
+  width: 80px;
+  height: 80px;
+  top: -4px;
+  left: -4px;
+  position: absolute;
+  z-index: 10001;
+}
+#FOETOpenButton .InnerBorder1 {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  top: 2px;
+  left: 2px;
+  border: 2px solid #6a401f;
+}
+#FOETOpenButton .InnerBorder1:after {
+  content: "";
+  display: block;
+  width: 68px;
+  height: 68px;
+  border: 2px solid #885328;
+  top: -4px;
+  left: -4px;
+  position: absolute;
+}
+#FOETOpenButton .InnerBorder1 .InnerBorder2 {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  top: 2px;
+  left: 2px;
+  border: 2px solid #261802;
+}
+#FOETOpenButton .InnerBorder1 .InnerBorder2:before {
+  content: "";
+  display: block;
+  background: #9d7e63;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+#FOETOpenButton .InnerBorder1 .InnerBorder2:after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 60px;
+  border: 2px solid #995f2e;
+  top: -4px;
+  left: -4px;
+  position: absolute;
+}
+#FOETOpenButton .InnerBorder1 .InnerBorder2 img {
+  display: block;
+  width: 48px;
+  height: 48px;
+  position: relative;
+  overflow: visible;
+  border: 2px solid #97714e;
+  left: 2px;
+  top: 2px;
+  border-radius: 25px;
+}
+#FOETWindows {
+  font-family: Arial, sans-serif;
+  position: absolute;
+  z-index: 10000;
+  width: 600px;
+  height: 400px;
+  background-image: url('/lib/img/w01-bg.png');
+}
+#FOETWindows > div {
+  position: relative;
+  width: 580px;
+  left: 10px;
+  height: 410px;
+  background-image: url('/lib/img/w01-bottom.png');
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-size: 100% 21px;
+}
+#FOETWindows > div:before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 21px;
+  left: -21px;
+  top: 0;
+  height: 410px;
+  background-image: url('/lib/img/w01-bottom-left.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+#FOETWindows > div:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 21px;
+  right: -21px;
+  top: 0;
+  height: 410px;
+  background-image: url('/lib/img/w01-bottom-right.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+#FOETWindows > div > h1 {
+  position: absolute;
+  top: -22px;
+  width: 580px;
+  height: 54px;
+  background-image: url('/lib/img/w01-top.png');
+  background-repeat: repeat-x;
+  background-position: top;
+  background-size: 100% 54px;
+  color: #f3d6a0;
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.1rem;
+  padding: 19px 0 0;
+  text-shadow: 1px 0 2px #241402, 0 1px 2px #241402, -1px 0 2px #241402, 0 -1px 2px #241402;
+}
+#FOETWindows > div > h1:before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 21px;
+  left: -21px;
+  top: 0;
+  height: 54px;
+  background-image: url('/lib/img/w01-top-left.png');
+  background-repeat: no-repeat;
+  background-position: top;
+}
+#FOETWindows > div > h1:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 21px;
+  right: -21px;
+  top: 0;
+  height: 54px;
+  background-image: url('/lib/img/w01-top-right.png');
+  background-repeat: no-repeat;
+  background-position: top;
+}
+#FOETWindows > div > h1 span#closeButton {
+  position: absolute;
+  top: 18px;
+  right: 0;
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-image: url('https://foefr.innogamescdn.com/assets/shared/gui/chat/chat_0.png');
+  background-position: -210px -226px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+#FOETWindows > div > h1 span#closeButton:hover {
+  background-position: -230px -226px;
+}
+#FOETWindows > div > h1 span#closeButton:active {
+  background-position: -250px -224px;
+}
+#FOETWindows > div > div {
+  position: absolute;
+  width: 580px;
+  height: 345px;
+  bottom: 21px;
+}
+#FOETWindows > div > div:before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 21px;
+  height: 100%;
+  left: -21px;
+  top: 0;
+  background-image: url('/lib/img/w01-left.png');
+  background-repeat: repeat-y;
+  background-position: top left;
+  background-size: 21px 100%;
+}
+#FOETWindows > div > div:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 21px;
+  height: 100%;
+  right: -21px;
+  top: 0;
+  background-image: url('/lib/img/w01-right.png');
+  background-repeat: repeat-y;
+  background-position: top left;
+  background-size: 21px 100%;
+}
+#FOETWindows > div > div #menu {
+  display: flex;
+  height: 22px;
+}
+#FOETWindows > div > div #menu > div {
+  flex: 1;
+  background-image: url('/lib/img/b01-bg.png');
+  background-repeat: repeat-x;
+  border-radius: 4px;
+  padding: 3px 0;
+  color: #cdd4e3;
+  text-align: center;
+  cursor: pointer;
+  margin: 0 5px;
+  box-shadow: 1px 0 2px black, 0 1px 2px black, -1px 0 2px black, 0 -1px 2px black;
+  text-shadow: 1px 0 2px #241402, 0 1px 2px #241402, -1px 0 2px #241402, 0 -1px 2px #241402;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+#FOETWindows > div > div #menu > div:first-child {
+  margin-left: 0;
+}
+#FOETWindows > div > div #menu > div:last-child {
+  margin-right: 0;
+}
+#FOETWindows > div > div #menu > div:hover {
+  background-position: 0 -68px;
+}
+#FOETWindows > div > div #menu > div.active {
+  background-position: 0 -34px;
+}
+#FOETWindows > div > div #wrapper {
+  height: calc(100% - 22px - 8px);
+  margin-top: 5px;
+  overflow: hidden;
+}
+#FOETWindows > div > div #wrapper #options {
+  position: relative;
+  height: 100%;
+  right: 0;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: auto;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+  align-content: flex-start;
+  transition: right 0.2s;
+}
+#FOETWindows > div > div #wrapper #options::-webkit-scrollbar {
+  width: 0;
+}
+#FOETWindows > div > div #wrapper #options .sectionOption {
+  display: flex;
+  align-items: center;
+  background: #6E4C31C8;
+  width: calc(50% - 5px - 2px);
+  height: 3rem;
+  min-height: 0;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 1px 0 2px black, 0 1px 2px black, -1px 0 2px black, 0 -1px 2px black;
+  font-family: Book Antiqua, serif;
+  text-shadow: 2px 2px #000000;
+  color: #efdba6;
+}
+#FOETWindows > div > div #wrapper #options .sectionOption:nth-child(odd) {
+  margin: 5px 5px 5px 2px;
+}
+#FOETWindows > div > div #wrapper #options .sectionOption:nth-child(even) {
+  margin: 5px 0 5px 5px;
+}
+#FOETWindows > div > div #wrapper #options .sectionOption span {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+#FOETWindows > div > div #wrapper #options .sectionOption:hover {
+  background: #955e32C8;
+}
+#FOETWindows > div > div #wrapper #content {
+  position: relative;
+  height: 100%;
+  bottom: 100%;
+  left: 100%;
+  transition: left 0.2s;
+  overflow: auto;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+}
+#FOETWindows > div > div #wrapper #content::-webkit-scrollbar {
+  width: 0;
+}
+#FOETWindows > div > footer {
+  position: absolute;
+  display: none;
+  width: 100%;
+  padding: 4px 6px;
+  left: -6px;
+  bottom: 15px;
+  border-radius: 0 0 4px 4px;
+  z-index: 10001;
+  border-top: 1px solid black;
+  font-size: 0.9rem;
+  text-shadow: 1px 0 2px #241402, 0 1px 2px #241402, -1px 0 2px #241402, 0 -1px 2px #241402;
+}
+#FOETWindows[hidden] {
+  display: none;
+}
+#FOETWindows.notified > div > footer {
+  display: block;
+  color: white;
+}
+#FOETWindows.notified.info > div > footer {
+  background: #78b2e3;
+}
+#FOETWindows.notified.success > div > footer {
+  background: #76bd1b;
+}
+#FOETWindows.notified.warn > div > footer {
+  background: #ce6221;
+}
+#FOETWindows.notified.error > div > footer {
+  background: #a40000;
+}
+#FOETWindows.content > div > div #wrapper #options {
+  right: 100%;
+  transition: right 0.2s;
+}
+#FOETWindows.content > div > div #wrapper #content {
+  left: 0;
+  transition: left 0.2s;
+}
+#FoEToolIndexPage {
+  background-image: url("/lib/img/background.jpg");
+  background-color: #223321;
+}
+#FoEToolIndexPage * {
+  margin: 0;
+  padding: 0;
+}
+#FoEToolIndexPage h1 {
+  margin: auto;
+  text-align: center;
+}
+#FoEToolIndexPage #FOETWindows > div > h1 {
+  top: -10px;
+}
+.textShadow {
+  text-shadow: 1px 0 2px #241402, 0 1px 2px #241402, -1px 0 2px #241402, 0 -1px 2px #241402;
+}
