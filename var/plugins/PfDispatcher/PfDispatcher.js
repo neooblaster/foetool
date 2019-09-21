@@ -25,7 +25,7 @@ function PfDispatcher (parent) {
     /**
      * @type {string} Version of the plugin.
      */
-    self.version = "0.1.1";
+    self.version = "0.1.2";
 
     /**
      * @type {Array} self.stylesheets  You stylesheet path located in root folder of the plugin.
@@ -56,7 +56,8 @@ function PfDispatcher (parent) {
             "LABEL": "Label",
             "DEDPART": "Part Dédiée",
             "SPENTPART": "Part Dépensée <br />Excès(+), Manquant(-)",
-            "SPENT": "Dépensés"
+            "SPENT": "Dépensés",
+            "PFS": "pfs"
         }
     };
 
@@ -78,6 +79,7 @@ function PfDispatcher (parent) {
         self.load();
         self.index();
         self.calc().totalSpent();
+        self.calc().totalParts();
     };
 
     /**
@@ -120,6 +122,11 @@ function PfDispatcher (parent) {
      * @type {number}  Total Forge Point spent.
      */
     self.totalSpent = 0;
+
+    /**
+     * @type {number} Total Percent parts dispatched.
+     */
+    self.totalParts = 0;
 
 
     /**
@@ -229,6 +236,16 @@ function PfDispatcher (parent) {
     self.calc = function() {
         return {
             /**
+             * Calculate the total percent parts (goal is to have 100%)
+             */
+            totalParts: function() {
+                self.totalParts = 0;
+                self.data.inputs.map(function(input) {
+                    self.totalParts += input.part;
+                });
+            },
+
+            /**
              * Calculate the total Forge Point spent.
              */
             totalSpent: function() {
@@ -327,6 +344,7 @@ function PfDispatcher (parent) {
                 self.data.inputs = inputs;
                 self.index();
                 self.save();
+                self.refresh().inputs();
             },
 
             /**
@@ -385,17 +403,14 @@ function PfDispatcher (parent) {
                 self.data.inputs.map(function(input) {
                     self.build().input(input);
                 });
-
-                self._HTMLElement.table.querySelector('tr:first-child th:last-child').textContent = `${self.texts.SPENT} ${self.totalSpent} pfs`;
+                self.refresh().headers();
             },
 
             /**
              * Update the calculated cell.
              */
             inputs: function() {
-                self.calc().totalSpent();
-
-                self._HTMLElement.table.querySelector('tr:first-child th:last-child').textContent = `Dépensés ${self.totalSpent} pfs`;
+                self.refresh().headers();
 
                 self.data.inputs.map(function(input) {
                     let id = input.id;
@@ -407,6 +422,17 @@ function PfDispatcher (parent) {
                     let row  = self._HTMLElement.table.querySelector(`tr#row${id}`);
                     row.querySelector('.spentPart').textContent = `${spentPart}% (${delta}pfs)`;
                 })
+            },
+
+            /**
+             * Update values in the table header cells.
+             */
+            headers: function() {
+                self.calc().totalSpent();
+                self.calc().totalParts();
+
+                self._HTMLElement.table.querySelector('tr:first-child th:last-child').textContent = `${self.texts.SPENT} ${self.totalSpent} ${self.texts.PFS}`;
+                self._HTMLElement.table.querySelector('tr:first-child th:nth-child(3)').textContent = `${self.texts.SPENT} (${self.totalParts}%)`;
             }
         }
     };
