@@ -1,0 +1,36 @@
+#content.SecuringPlace {
+    @inputWidth: 100px;
+
+    .inputEntry {
+        padding: 3px 2px ;
+        margin: auto;
+
+        label {
+            display: inline-block;
+            width: calc(~'90% - @{inputWidth} - 4px - 6px'); // -2x.inputEntry.padding - .inputEntry input.padding
+            color: white;
+            text-align: right;
+            &:after {
+                content: " : ";
+            }
+        }
+        input {
+            display: inline-block;
+            width: @inputWidth;
+            text-align: center;
+            margin: 0 0 0 6px;
+        }
+        span {
+            display: inline-block;
+            width: @inputWidth;
+            text-align: center;
+            color: white;
+        }
+    }
+
+    .resultField {
+        border-top: 1px solid #241402;
+        margin-top: 8px;
+        padding-top: 5px;
+    }
+}
