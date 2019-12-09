@@ -8,7 +8,7 @@
 
     <!-- Sections -->
     <resource KEY="SECTION_GM" CST="true" SST="false">GM</resource>
-    <resource KEY="SECTION_QUESTS" CST="true" SST="false">Quêtes</resource>
+    <resource KEY="SECTION_QUESTS" CST="true" SST="false">Événements (Soon)</resource>
     <resource KEY="SECTION_COLONY" CST="true" SST="false">Colonies (Soon)</resource>
     <resource KEY="SECTION_BUILDING" CST="true" SST="false">Bâtiments</resource>
     <resource KEY="SECTION_TOOL" CST="true" SST="false">Outils</resource>
@@ -21,6 +21,36 @@
     <resource KEY="COLONY_EGYPTIAN" CST="true" SST="false">Colonie Egyptienne</resource>
     <resource KEY="COLONY_EGYPTIAN_TTL" CST="true" SST="false">Colonie Egyptienne</resource>
 
+    <!-- Section : Quests & Events -->
+    <resource KEY="FALL_EVENT" CST="true" SST="false">Evt Automnal</resource>
+    <resource KEY="FALL_EVENT_TTL" CST="true" SST="false">Evt Automnal</resource>
+    <resource KEY="FALL_EVENT_QUEST_01_NAME" CST="true" SST="false">Concours de pâtisserie d'automne 2019</resource>
+    <resource KEY="FALL_EVENT_QUEST_02_NAME" CST="true" SST="false">Choisir une recette</resource>
+    <resource KEY="FALL_EVENT_QUEST_03_NAME" CST="true" SST="false">Notes d'étoiles</resource>
+    <resource KEY="FALL_EVENT_QUEST_04_NAME" CST="true" SST="false">La cidrerie</resource>
+    <resource KEY="FALL_EVENT_QUEST_05_NAME" CST="true" SST="false">Assistante de grand-mère</resource>
+    <resource KEY="FALL_EVENT_QUEST_06_NAME" CST="true" SST="false">Fabriquer sa propre farine à gâteau</resource>
+    <resource KEY="FALL_EVENT_QUEST_07_NAME" CST="true" SST="false">Trucs et astuces</resource>
+    <resource KEY="FALL_EVENT_QUEST_08_NAME" CST="true" SST="false">Préchauffer est essentiel</resource>
+    <resource KEY="FALL_EVENT_QUEST_09_NAME" CST="true" SST="false">Pain en tranches 1</resource>
+    <resource KEY="FALL_EVENT_QUEST_10_NAME" CST="true" SST="false">Plâts à gateaux</resource>
+    <resource KEY="FALL_EVENT_QUEST_11_NAME" CST="true" SST="false">Plâts légère</resource>
+    <resource KEY="FALL_EVENT_QUEST_12_NAME" CST="true" SST="false">La chimie en pâtisserie</resource>
+    <resource KEY="FALL_EVENT_QUEST_13_NAME" CST="true" SST="false">Pain en tranches 2</resource>
+    <resource KEY="FALL_EVENT_QUEST_14_NAME" CST="true" SST="false">Mi-hauteur</resource>
+    <resource KEY="FALL_EVENT_QUEST_15_NAME" CST="true" SST="false">Pain en tranches 3</resource>
+    <resource KEY="FALL_EVENT_QUEST_16_NAME" CST="true" SST="false">De la délicatesse</resource>
+    <resource KEY="FALL_EVENT_QUEST_17_NAME" CST="true" SST="false">Ça coule</resource>
+    <resource KEY="FALL_EVENT_QUEST_18_NAME" CST="true" SST="false">Du Calme</resource>
+    <resource KEY="FALL_EVENT_QUEST_19_NAME" CST="true" SST="false">-</resource>
+    <resource KEY="FALL_EVENT_QUEST_20_NAME" CST="true" SST="false">Brûlure de congélation</resource>
+    <resource KEY="FALL_EVENT_QUEST_21_NAME" CST="true" SST="false">-</resource>
+    <resource KEY="FALL_EVENT_QUEST_22_NAME" CST="true" SST="false">Des grumeaux ? Aucun problèmes !</resource>
+
+    <!-- Section : Tasks -->
+    <resource KEY="SPEND_FORGE_POINT" CST="true" SST="false">Dépensez %s points Forge</resource>
+
+
     <!-- Section : Outils -->
     <resource KEY="PF_DISPATCHER" CST="true" SST="false">Dispatch des PFs</resource>
     <resource KEY="PF_DISPATCHER_TTL" CST="true" SST="false">Dispatch des PFs</resource>
@@ -30,5 +60,7 @@
     <resource KEY="YIELD_TTL" CST="true" SST="false">Rentabilités (Soon) </resource>
     <resource KEY="GM_CONTRIB" CST="true" SST="false">Investissement GM (Soon) </resource>
     <resource KEY="GM_CONTRIB_TTL" CST="true" SST="false">Investissement GM (Soon) </resource>
+    <resource KEY="SECURINGPLACE" CST="true" SST="false">Sécurisation de place</resource>
+    <resource KEY="SECURINGPLACE_TTL" CST="true" SST="false">Sécurisation de place</resource>
 
 </resources>
