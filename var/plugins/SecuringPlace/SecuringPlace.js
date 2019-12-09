@@ -64,8 +64,10 @@ function SecuringPlace (parent) {
             "REQUIRE_TO_LOCK": "PFs que vous devez ajouter pour bloquer la place",
             "TOTAL_CONTRIB": "Contribution Total",
             "PROFIT": "Profit",
+            "SUMPROFIT": "Profit Tot.",
             "UP": "▲",
-            "DOWN": "▼"
+            "DOWN": "▼",
+            "ADD": "+",
         }
     };
 
@@ -139,6 +141,8 @@ function SecuringPlace (parent) {
                 return new self.parent.HTML().compose(entry);
             },
 
+
+
             result: function() {
                 let result = {
                     classList: ['resultField']
@@ -203,11 +207,33 @@ function SecuringPlace (parent) {
                             classList: ['inputEntry'],
                             children: [
                                 {name: 'label', properties: {textContent: self.texts.PROFIT}},
-                                {name: 'span', properties: {textContent: profit}}
+                                {name: 'span', attributes: {id: "profit"}, properties: {textContent: profit}},
+                                {
+                                    name: 'button',
+                                    properties: {textContent: self.texts.ADD,
+                                    onclick: function () {
+                                        let profit = parseInt(self.host.querySelector(`#profit`).textContent);
+                                        let sumProfitElt = self.host.querySelector('#sumProfit');
+                                        sumProfitElt.textContent = parseInt(sumProfitElt.textContent) + profit;
+                                        self.clear();
+                                    }}
+                                }
                             ]
                         };
 
                         return self.parent.HTML().compose(profitMsg);
+                    },
+
+                    sumProfit: function (sumProfit) {
+                        let sumProfitMsg = {
+                            classList: ['inputEntry'],
+                            children: [
+                                {name: 'label', properties: {textContent: self.texts.SUMPROFIT}},
+                                {name: 'span', attributes: {id: "sumProfit"}, properties: {textContent: sumProfit}}
+                            ]
+                        };
+
+                        return self.parent.HTML().compose(sumProfitMsg);
                     }
                 };
             }
@@ -250,6 +276,14 @@ function SecuringPlace (parent) {
         let reward = Math.round(self.data['REWARD'] * (1 + (self.data['ARCH_BONUS'] / 100)));
         let profit = reward - contribTotal;
 
+        // Retrieve Sum of Profit
+        let sumProfitElt = self.host.querySelector('#sumProfit');
+        let sumProfit = 0;
+        if (sumProfitElt) {
+            sumProfit = parseInt(sumProfitElt.textContent);
+        }
+
+
         // console.log('Reste', leftToLevelUp);
         // console.log('Pour égaliser', toEqualize);
         // console.log('Reste après égalisation', remainAfterEqualization);
@@ -273,6 +307,17 @@ function SecuringPlace (parent) {
             resultHost.appendChild(self.build().message().totalToLock(contribTotal));
             resultHost.appendChild(self.build().message().profit(profit));
         }
+
+        resultHost.appendChild(self.build().message().sumProfit(sumProfit));
+    };
+
+    self.clear = function () {
+        self.inputs.map(function(input) {
+            if (input !== 'ARCH_BONUS') {
+                self.host.querySelector(`div.inputEntry#${input} input`).value = 0;
+            }
+        });
+        self.calc();
     };
 
 
