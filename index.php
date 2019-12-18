@@ -44,7 +44,7 @@
     </div>
 
     <footer>
-        <a href="https://www.ssllabs.com/ssltest/analyze.html?d=foe.neoblaster.fr">Evaluation SSL</a>
+        <a href="https://www.ssllabs.com/ssltest/analyze.html?d=foe.neoapps.fr">Evaluation SSL</a>
         •
         <a href="https://github.com/neooblaster/foetool">Sources GitHub</a>
     </footer>
